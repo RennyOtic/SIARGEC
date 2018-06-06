@@ -25,7 +25,7 @@ class ChequesStoreRequest extends FormRequest
     {
         return [
             'num' => 'required|numeric|digits_between:8,16',
-            'beneficiary' => 'required|alpha',
+            'beneficiary' => 'required|alfa_space',
             'bank_id' => 'required|numeric',
             'num_box' => 'required_if:state,1',
             'shelf_id' => 'required_if:state,1',

@@ -8,17 +8,6 @@
                     <i class="ti-menu"></i>
                 </a>
             </li>
-            {{-- ### Boton de abrir y cerrar busqueda ### --}}
-            <li class="search-box">
-                <a class="search-toggle no-pdd-right" href="javascript:void(0);">
-                    <i class="search-icon ti-search pdd-right-10"></i>
-                    <i class="search-icon-close ti-close pdd-right-10"></i>
-                </a>
-            </li>
-            {{-- ### Boton de    busqueda ### --}}
-            <li class="search-input">
-                <input class="form-control" type="text" placeholder="Buscar...">
-            </li>
         </ul>
         <ul class="nav-right">
             <li class="dropdown">

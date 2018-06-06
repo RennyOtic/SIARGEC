@@ -6,18 +6,18 @@
 </div>
 <br>
 <div class="row">
-	<div class="col-md-5 bd bgc-white peer-greed p-40" style="font-size: 1.5em">
-		<p>Beneficiado: <b>{{ $cheque->beneficiary }}</b></p>
-		<p>Banco: <b>{{ $cheque->bank->name }}</b></p>
-		<p>Fecha: <b>{{ $cheque->dated_at }}</b></p>
-		<p>Estado: <b>{{ ($cheque->state) ? 'Físico' : 'Digital' }}</b></p>
+	<div class="col-md-5 bd bgc-white peer-greed p-40" style="font-size: 1em">
+		<span>Beneficiado: <b>{{ $cheque->beneficiary }}</b></span><br>
+		<span>Banco: <b>{{ $cheque->bank->name }}</b></span><br>
+		<span>Fecha: <b>{{ $cheque->dated_at }}</b></span><br>
+		<span>Estado: <b>{{ ($cheque->state) ? 'Físico' : 'Digital' }}</b></span><br>
 		@if($cheque->state)
-		<p>Estante: <b>{{ $cheque->folder->box->shelf->name }}</b></p>
-		<p>Caja: <b>{{ $cheque->folder->box->name }}</b></p>
-		<p>Carpeta: <b>{{ $cheque->folder->name }}</b></p>
+		<span>Estante: <b>{{ $cheque->folder->box->shelf->name }}</b></span><br>
+		<span>Caja: <b>{{ $cheque->folder->box->name }}</b></span><br>
+		<span>Carpeta: <b>{{ $cheque->folder->name }}</b></span><br>
 		@endif
-		<p>Monto: <b>{{ $cheque->total }} Bs.</b></p>
-		<p>Registrado: <b>{{ $cheque->created_at->diffForHumans() }}</b></p>
+		<span>Monto: <b>{{ $cheque->total }} Bs.</b></span><br>
+		<span>Registrado: <b>{{ $cheque->created_at->diffForHumans() }}</b></span><br>
 	</div>
 	<div class="col-md-7 bd bgc-white peer-greed p-40">
 		@foreach($cheque->image as $image)

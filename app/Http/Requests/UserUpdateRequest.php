@@ -24,8 +24,8 @@ class UserUpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|alpha|min:3|max:35',
-            'last_name' => 'required|alpha|max:255',
+            'name' => 'required|alfa_space|min:3|max:35',
+            'last_name' => 'required|alfa_space|max:255',
             'email' => 'required|email|max:255',
             'num_id' => 'required|numeric|exr_ced',
             'role_id' => 'required',

@@ -32,7 +32,7 @@ return [
     | Logos del Menu
     |--------------------------------------------------------------------------
     */
-    'logo_lg'   => '<b style="color:red;margin-left: -1px;font-size: 25px;">' . env('APP_NAME', 'Laravel') . '</b>',
+    'logo_lg'   => '<img src="/images/logo_grande2.png" style="height: 33px;" alt="logo">',
     'logo_xs' => '<img src="/images/logo_pequeno.png" alt="logo" height="60px" style="    margin-left: 15px;">',
 
     /*

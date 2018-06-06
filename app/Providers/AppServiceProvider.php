@@ -46,6 +46,17 @@ class AppServiceProvider extends ServiceProvider
         \Validator::replacer('image64', function($message, $attribute, $rule, $parameters) {
             return str_replace(':values',join(",",$parameters),$message);
         });
+
+        
+        /**
+         * Verifiva el campo solo tenga letras y espacios.
+         */
+        \Validator::extend('alfa_space', function($attribute, $value)
+        {
+            if ($value[0] == '') return false;
+            return preg_match('/.([a-zA-Z])$/', $value);
+            return false;
+        }, 'No debe poseer caracteres especiales ni números.');
     }
 
     /**

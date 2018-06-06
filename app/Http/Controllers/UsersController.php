@@ -97,6 +97,8 @@ class UsersController extends Controller
     public function destroy($id)
     {
         if($id == 1) return response(['error' => 'Error al modificar usuario'], 422);
+        if (\Auth::user()->id == $id)  return response(['error' => 'No se puede borrar usted mismo'], 422);
+        
         $user = User::findOrFail($id)->delete();
         return response()->json($user);
     }
